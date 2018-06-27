@@ -1019,6 +1019,378 @@ ol {
 	margin-right: 0;
 }
 
+/*
+################
+Start Blog Home  Page style
+################
+*/
+.generic-blockquote {
+    padding: 30px 50px 30px 30px;
+    background: #f9f9ff;
+    border-left: 2px solid #f6214b;
+}
+.section-gap {
+	padding: 100px 0;
+}
+.blog-banner-area {
+	background: url(../img/elements/blog/blog-banner.jpg) center;
+	background-size: cover;
+}
+  
+.blog-banner-area .overlay-bg {
+	background: rgba(0, 0, 0, 0.55);
+}
+  
+.blog-banner-wrap {
+	text-align: center;
+}
+  
+.blog-post-list .single-post {
+	background: transparent;
+	padding: 0px 30px;
+}
+  
+.single-post {
+	margin-bottom: 30px;
+}
+  
+.single-post .tags {
+	margin-top: 40px;
+}
+  
+.single-post .tags li {
+	display: inline-block;
+}
+  
+.single-post .tags li a {
+	color: #222;
+}
+  
+.single-post .tags li:hover a {
+	color: #f6214b;
+}
+  
+.single-post h1 {
+	margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+  
+.single-post .title h4 {
+	margin-bottom: 10px;
+}
+  
+.single-post .comment-wrap ul li, .single-post .social-wrap ul li {
+	display: inline-block;
+	margin-right: 15px;
+}
+  
+@media (max-width: 414px) {
+	.single-post .comment-wrap, .single-post .social-wrap {
+	  margin-top: 10px;
+	}
+}
+  
+.single-post .comment-wrap ul li a {
+	color: #777777;
+}
+  
+.single-post .social-wrap ul {
+	text-align: right;
+}
+  
+.single-post .social-wrap ul li a i {
+	color: #777777;
+}
+  
+.single-post .social-wrap ul li a i:hover {
+	color: #222;
+}
+  
+@media (max-width: 768px) {
+	.single-post .social-wrap ul {
+	  text-align: left;
+	}
+}
+  
+.single-widget {
+	border: 1px solid #eee;
+	padding: 40px 30px;
+	margin-bottom: 30px;
+}
+  
+.single-widget .title {
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+  
+.search-widget i {
+	color: #f6214b;
+}
+
+.search-widget form.example {
+	border: 1px solid #eee;
+}
+  
+.search-widget form.example input[type=text] {
+	padding: 10px;
+	font-size: 14px;
+	border: none;
+	float: left;
+	width: 80%;
+	background: #eee;
+}
+  
+.search-widget form.example button {
+	float: left;
+	width: 20%;
+	padding: 10px;
+	background: #eee;
+	color: white;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+  
+.search-widget form.example::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+  
+.protfolio-widget {
+	text-align: center;
+}
+  
+.protfolio-widget h4 {
+	padding: 20px 0;
+}
+  
+.protfolio-widget ul li {
+	padding: 15px;
+	display: inline-block;
+}
+  
+.protfolio-widget ul li a i {
+	color: #222;
+}
+  
+.protfolio-widget ul li a i:hover {
+	color: #f6214b;
+}
+  
+.category-widget ul li {
+	border-bottom: 1px solid #eee;
+	padding: 10px 20px;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+  
+.category-widget ul li h6 {
+	font-weight: 300;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+  
+.category-widget ul li span {
+	color: #222;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+  
+.category-widget ul li:hover {
+	border-color: #f6214b;
+}
+
+.category-widget ul li:hover h6, .category-widget ul li:hover span {
+	color: #f6214b;
+}
+  
+.tags-widget ul li {
+	display: inline-block;
+	background: #fff;
+	border: 1px solid #eee;
+	padding: 8px 10px;
+	margin-bottom: 8px;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+  
+.tags-widget ul li a {
+	font-weight: 300;
+	color: #222;
+}
+  
+.tags-widget ul li:hover {
+	background-color: #f6214b;
+}
+  
+.tags-widget ul li:hover a {
+	color: #fff;
+}
+  
+.recent-posts-widget .single-recent-post .recent-details {
+	margin-left: 20px;
+}
+  
+.recent-posts-widget .single-recent-post .recent-details h4 {
+	line-height: 1.5em !important;
+	font-size: 14px;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+  
+.recent-posts-widget .single-recent-post .recent-details p {
+	margin-top: 10px;
+}
+  
+.recent-posts-widget .single-recent-post:hover h4 {
+	color: #f6214b;
+}
+  
+@media (max-width: 960px) {
+	.recent-posts-widget .single-recent-post {
+	  margin-bottom: 20px;
+	}
+}
+/*
+################
+    End Blog Home  Page style
+################
+*/
+/*
+################
+    Start Blog Details  Page style
+################
+*/
+.nav-area {
+	border-bottom: 1px solid #eee;
+}
+  
+.nav-area a {
+	color: #222;
+}
+  
+.nav-area .nav-left .thumb {
+	padding-right: 20px;
+}
+
+.nav-area .nav-right {
+	text-align: right;
+}
+  
+.nav-area .nav-right .thumb {
+	padding-left: 20px;
+}
+  
+@media (max-width: 768px) {
+	.nav-area .post-details h4 {
+	  font-size: 14px;
+	}
+}
+  
+@media (max-width: 466px) {
+	.nav-area .nav-right {
+	  margin-top: 50px;
+	}
+}
+  
+.comment-sec-area {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 50px;
+}
+  
+.comment-sec-area a {
+	color: #222;
+}
+  
+.comment-sec-area .comment-list {
+	padding-bottom: 30px;
+}
+  
+.comment-sec-area .comment-list.left-padding {
+	padding-left: 25px;
+}
+  
+.comment-sec-area .thumb {
+	margin-right: 20px;
+}
+  
+.comment-sec-area .date {
+	font-size: 13px;
+	color: #cccccc;
+}
+  
+.comment-sec-area .comment {
+	color: #777777;
+}
+  
+.comment-sec-area .btn-reply {
+	background-color: #222;
+	color: #fff;
+	border: 1px solid #222;
+	padding: 8px 30px;
+	display: block;
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+  
+.comment-sec-area .btn-reply:hover {
+	background-color: transparent;
+	color: #222;
+}
+  
+.commentform-area {
+	padding-bottom: 100px;
+}
+  
+.commentform-area h5 {
+	font-weight: 600 !important;
+}
+  
+.commentform-area .form-control {
+	border-radius: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+  
+.commentform-area .primary-btn {
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #f6214b !important;
+	border: 1px solid transparent;
+	color: #fff;
+}
+  
+.commentform-area .primary-btn:hover {
+	border-color: #f6214b !important;
+}
+  
+.commentform-area textarea {
+	height: 90%;
+}
+  
+.commentform-area .form-control {
+	border: none;
+	background: #f9f9ff;
+}
+
+/*---------------------
+	End Blog Details Page style
+---------------------*/
+
 /*---------------------
 	Other Pages
 -----------------------
