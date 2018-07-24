@@ -30,8 +30,9 @@ app.get('/createdb', (req, res) => {
 });
 
 // Create table
-app.get('/blogs', (req, res) => {
-    let sql = 'SELECT * FROM blog';
+app.get('/apis/blogs', (req, res) => {
+    console.log('get blogs');
+    let sql = 'SELECT * FROM blogs';
     db.query(sql, (err, result) => {
         if (err) throw err;
         console.log(result);
@@ -39,44 +40,38 @@ app.get('/blogs', (req, res) => {
     });
 });
 
-app.put('/blog', (req, res) => {
+app.post('/apis/blogs', (req, res) => {
+    console.log('put blog');
     const test = {
-        post_date:now(),
+        post_date:new Date().toISOString().slice(0, 19).replace('T', ' '),
         blog_title:'Cartridge Is Better Than Ever A Discount Toner',
-        blog_preview='MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.',
-        blog_content='MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.<blockquote class=\"generic-blockquote\">        “Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government.banking\”</blockquote>',
-        blog_picture='img/blog/p1.jpg',
-        blog_like_count=6
+        blog_preview:'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.',
+        blog_content:'MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.<blockquote class=\"generic-blockquote\">        “Recently, the US Federal government banned online casinos from operating in America by making it illegal to transfer money to them through any US bank or payment system. As a result of this law, most of the popular online casino networks such as Party Gaming and PlayTech left the United States. Overnight, online casino players found themselves being chased by the Federal government.banking\”</blockquote>',
+        blog_picture:'img/blog/p1.jpg',
+        blog_like_count:6
     };
-    connection.beginTransaction(function(err) {
+    db.beginTransaction(function(err) {
         if (err) { throw err; }
-        connection.query('INSERT INTO blogs SET ?', 
+        db.query('INSERT INTO blogs SET ?', 
             test, function(err, result) {
             if (err) { 
-                connection.rollback(function() {
+                db.rollback(function() {
                     throw err;
                 });
             }
-        
-            var log = 'Post ' + result.insertId + ' added';
-        
-            connection.query('INSERT INTO log SET data=?', log, function(err, result) {
+            db.commit(function(err) {
                 if (err) { 
-                    connection.rollback(function() {
+                    db.rollback(function() {
                         throw err;
                     });
-                }  
-                connection.commit(function(err) {
-                    if (err) { 
-                        connection.rollback(function() {
-                            throw err;
-                        });
-                    }
-                    console.log('success!');
-                });
+                }
+                console.log('success!');
             });
         });
     });
+
+    let sql = 'SELECT * FROM blogs';
+
     db.query(sql, (err, result) => {
         if (err) throw err;
         console.log(result);
