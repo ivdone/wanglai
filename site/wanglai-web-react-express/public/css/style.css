@@ -776,9 +776,8 @@ ol {
 .portfolio-info {
 	position: absolute;
 	width: calc(100% - 110px);
-	height: calc(30%);
 	left: 55px;
-	bottom: 55px;
+	bottom: 15px;
 	text-align: center;
 	padding-top: calc(15% - 55px);
 	border: 1px solid #fff;

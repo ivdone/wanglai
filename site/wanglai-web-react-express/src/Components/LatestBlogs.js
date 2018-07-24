@@ -12,15 +12,9 @@ class LatestBlogs extends Component {
 
     return (
       <section className="latest-blog-area sp-pad" id="blog">
-      <div className="container">
-        <div className="row d-flex justify-content-center">
-          <div className="menu-content pb-60 col-lg-8">
-            <div className="title text-center">
-              <h1 className="sp-title">Latest News from our Blog</h1>
-              <p className="sp-sub-title">Who are in extremely love with eco friendly system.</p>
-            </div>
-          </div>
-        </div>          
+      <h1 className="sp-title">最新日志</h1>
+      <p className="sp-sub-title">记录旺来的故事</p>
+      <div className="container">                 
         <div className="row">
           {rows}
         </div>
