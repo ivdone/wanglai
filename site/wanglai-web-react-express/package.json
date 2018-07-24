@@ -29,6 +29,7 @@
     "mysql": "^2.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-owl-carousel2": "^0.3.0",
     "react-scripts": "^1.1.4"
   },
   "devDependencies": {

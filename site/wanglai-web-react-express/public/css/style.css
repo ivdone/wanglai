@@ -666,6 +666,14 @@ ol {
 	transition: all 0.4s;
 }
 
+.hero-slider-1 {
+	background-image: url("../img/hero-slider/1.jpg");
+}
+
+.hero-slider-2 {
+	background-image: url("../img/hero-slider/2.jpg");
+}
+
 .hs-item {
 	min-height: 950px;
 	position: relative;
@@ -893,6 +901,7 @@ ol {
 	padding-top: 150px;
 	padding-bottom: 150px;
 	position: relative;
+	background-image: url("../img/contact-bg.jpg");
 }
 
 .contact-section .contact-warp {
