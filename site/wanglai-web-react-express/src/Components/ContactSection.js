@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 class Contact extends Component {
   render() {
+    const style = {backgroundImage: "url(\"" + this.props.bgurl + "\")"};
+
     return (
-      <section className="contact-section set-bg spad">
+      <section className="contact-section set-bg spad" style={style}>
         <div className="container-fluid contact-warp">
           <div className="contact-text">
             <div className="container p-0">

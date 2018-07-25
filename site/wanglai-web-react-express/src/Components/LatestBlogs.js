@@ -3,12 +3,9 @@ import BlogPreview from './BlogPreview.js';
 
 class LatestBlogs extends Component {
   render() {
-    const rows = [];
-    this.props.BlogPreviews.forEach((preview) => {
-      rows.push(<BlogPreview
-        blog={preview} key=""/>
-      );
-    });
+    const rows = this.props.BlogPreviews.map((preview, id) => 
+      <BlogPreview blog={preview} key={id}/>
+    );    
 
     return (
       <section className="latest-blog-area sp-pad" id="blog">

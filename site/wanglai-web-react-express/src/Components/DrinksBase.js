@@ -4,8 +4,8 @@ import Drink from './Drink'
 
 class ProductsContent extends Component {
   render() {
-    const drinks = this.props.drinks.map((drink) => 
-        <Drink drink={drink} key={drink.id}/>
+    const drinks = this.props.drinks.map((drink, id) => 
+        <Drink drink={drink} key={id}/>
     );
     return (
         <div className="portfolio-warp">                

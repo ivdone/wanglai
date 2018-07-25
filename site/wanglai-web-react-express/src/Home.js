@@ -81,6 +81,8 @@ const testDrinks = [
     }
 ];
 
+const bgurl="./img/review-bg.jpg"
+
 class Home extends Component {
   render() {    
     return (
@@ -89,7 +91,7 @@ class Home extends Component {
             <Intro className="intro-area"/>
             <DrinksHome className="drinks-area" drinks={testDrinks}/>
             <LatestBlogs className="latest-blog" BlogPreviews={test} />
-            <ContactSection className="contact-area"/>
+            <ContactSection className="contact-area" bgurl={bgurl}/>
         </React.Fragment>
     );
   }
