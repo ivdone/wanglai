@@ -4,7 +4,7 @@ class MileStone extends Component {
   render() {
     return (
       <div className="element spad sp-pad">
-        <div className="title">
+        <div className="title text-center">
           <h1 className="sp-title">今天的旺来</h1>
         </div>
         <div className="row">

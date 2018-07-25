@@ -22,9 +22,9 @@ class Header extends Component {
                 <ul>
                     <li><Link to="/">主页</Link></li>
                     <li><Link to="about">关于我们</Link></li>
-                    <li><Link to="drinks">饮品</Link></li>
+                    <li><Link to="products">饮品</Link></li>
                     <li><Link to="blog">Blog</Link></li>
-                    <li><Link to="contact">联系方式</Link></li>
+                    <li><Link to="contact">联系我们</Link></li>
                 </ul>
             </nav>
         </header>

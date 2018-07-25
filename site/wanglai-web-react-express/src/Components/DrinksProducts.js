@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import DrinksBase from './DrinksBase'
 
-class DrinksHome extends Component {
-  render() {    
+class DrinksProducts extends Component {
+  render() {
+    const categories = this.props.categories;
     return (
         <React.Fragment>
-        <section className="portfolio-section sp-pad spad">
-            <h1 className="sp-title">招牌饮品</h1>
+        <section className="portfolio-section sp-pad">
             <DrinksBase drinks={this.props.drinks} />
             <div className="clearfix"></div>
         </section>
@@ -15,6 +15,4 @@ class DrinksHome extends Component {
   }
 }
 
-export default DrinksHome;
-
-
+export default DrinksProducts

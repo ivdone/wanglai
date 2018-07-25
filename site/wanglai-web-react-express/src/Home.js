@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 
 import HeroSlider from './Components/HeroSlider'
 import Intro from './Components/Intro'
-import MileStone from './Components/MileStone'
 import LatestBlogs from './Components/LatestBlogs'
-import Contact from './Components/Contact'
+import ContactSection from './Components/ContactSection'
 import DrinksHome from './Components/DrinksHome'
 
 const test = [
@@ -14,6 +13,14 @@ const test = [
         tags: [{id : 1, title : "Travel"}, {id : 0, title : "Life style"}],
         title: "Portable latest Fashion for young women",
         preview: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
+        post_date: "31st January, 2018"
+    },
+    {
+        blogid : 1,
+        img : "img/b2.jpg",
+        tags: [{id : 1, title : "Travel"}, {id : 0, title : "Life style"}],
+        title: "Portable latest Fashion for young women 2",
+        preview: "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
         post_date: "31st January, 2018"
     },
     {
@@ -82,8 +89,7 @@ class Home extends Component {
             <Intro className="intro-area"/>
             <DrinksHome className="drinks-area" drinks={testDrinks}/>
             <LatestBlogs className="latest-blog" BlogPreviews={test} />
-            <MileStone className="milestones"/>
-            <Contact className="contact-area"/>
+            <ContactSection className="contact-area"/>
         </React.Fragment>
     );
   }
