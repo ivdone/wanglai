@@ -42,9 +42,20 @@ const tags = [
     }
 ];
 
+const post = {
+    blogid : 0,
+    img : "img/b1.jpg",
+    tags: [{id : 1, title : "Travel"}, {id : 0, title : "Life"}],
+    title: "Portable latest Fashion for young women",
+    preview: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
+    post_date: "31st January, 2018",
+    content: "something"
+}
+
 class Blog extends Component {
     constructor(props) {
         super(props);
+        console.log(props.match);
         this.state = {
             isSingle: false,
             result: {
@@ -65,9 +76,13 @@ class Blog extends Component {
         this.setState(
             (prevState, props) => {
                 return {
-                    previews : test.filter( preview => category === "*" || preview.tags.some(tag => tag.title === category)),
-                    hasPrev : false,
-                    hasNext : false
+                    isSingle: props.match.params.blogid !== undefined,
+                    result : {
+                        previews : test.filter( preview => category === "*" || preview.tags.some(tag => tag.title === category)),
+                        hasPrev : false,
+                        hasNext : false,
+                        post : post
+                    }
                 };
             }
         );
@@ -82,8 +97,7 @@ class Blog extends Component {
                 <section className="blog-posts-area section-gap">
                     <div className="container">
                         <div className="row">
-                            {BlogArea}
-                            
+                            {BlogArea}                            
                             <BlogSideBar tags={tags} callback={(category) => this.update(category)}/>
                         </div>
                     </div>

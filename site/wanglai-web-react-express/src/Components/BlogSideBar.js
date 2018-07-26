@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class BlogSideBar extends Component {
   render() {
     const rows = this.props.tags.map((tag, id) => 
-        <li key="id"><a onClick={() => this.props.callback(tag.name)} className="justify-content-between align-items-center d-flex"><h6>{tag.name}</h6> <span>{tag.count}</span></a></li>
+        <li key={id}><a onClick={() => this.props.callback(tag.name)} className="justify-content-between align-items-center d-flex"><h6>{tag.name}</h6> <span>{tag.count}</span></a></li>
     );  
     const sum = this.props.tags.reduce((acc, curr) => acc + curr.count, 0);
     return (

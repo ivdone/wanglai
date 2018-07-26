@@ -1,7 +1,7 @@
 html,
 body {
 	height: 100%;
-	font-family: 'Open Sans', sans-serif, 微软雅黑;
+	font-family: "Poppins", sans-serif, 微软雅黑;
 }
 
 h1,
@@ -13,7 +13,7 @@ h6 {
 	color: #222121;
 	margin: 0;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif, 微软雅黑;
+	font-family: "Poppins", sans-serif, 微软雅黑;
 }
 
 h1 {

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+  Link
+} from 'react-router-dom';
 
 class BlogPreview extends Component {
   render() {
@@ -12,7 +15,9 @@ class BlogPreview extends Component {
         <ul className="tags">
           {tags}
         </ul>
-        <a href={"blog?id=" + blog.blogid}><h4>{blog.title}</h4></a>
+        <Link to={`/blog/${blog.blogid}`}>
+          <h4>{blog.title}</h4>
+        </Link>
         <p>
           {blog.preview}
         </p>
