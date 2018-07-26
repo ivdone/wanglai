@@ -11,7 +11,7 @@ class LatestBlogs extends Component {
       <section className="latest-blog-area sp-pad" id="blog">
       <h1 className="sp-title">最新日志</h1>
       <p className="sp-sub-title">记录旺来的故事</p>
-      <div className="container">                 
+      <div className="container-fluid">                 
         <div className="row">
           {rows}
         </div>

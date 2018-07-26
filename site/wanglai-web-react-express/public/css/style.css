@@ -1,7 +1,7 @@
 html,
 body {
 	height: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif, 微软雅黑;
 }
 
 h1,
@@ -13,7 +13,7 @@ h6 {
 	color: #222121;
 	margin: 0;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif, 微软雅黑;
 }
 
 h1 {
@@ -515,6 +515,7 @@ ol {
 	position: relative;
 	padding: 14px;
 	margin-left: 30px;
+	color: white;
 }
 
 .search-top .se-btn {
@@ -1532,27 +1533,27 @@ Start Blog Home  Page style
 	border-radius: 5px;
 }
   
-.latest-blog-area .single-blog .tags {
+.single-blog .tags {
 	margin: 20px 0;
 }
   
-.latest-blog-area .single-blog .tags li {
+.single-blog .tags li {
 	display: inline-block;
 	background: #f6214b;
 	border: 1px solid transparent;
 }
   
-.latest-blog-area .single-blog .tags li a {
+.single-blog .tags li a {
 	color: #fff;
 	padding: 10px;
 }
   
-.latest-blog-area .single-blog .tags li:hover {
+.single-blog .tags li:hover {
 	background-color: #fff;
 	border: 1px solid #eee;
 }
   
-.latest-blog-area .single-blog .tags li:hover a {
+.single-blog .tags li:hover a {
 	color: #222;
 }
   

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HeroSlider from './Components/HeroSlider'
 import Intro from './Components/Intro'
 import PageTop from './Components/PageTop'
 import MileStone from './Components/MileStone'

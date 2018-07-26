@@ -3,7 +3,6 @@ import DrinksBase from './DrinksBase'
 
 class DrinksProducts extends Component {
   render() {
-    const categories = this.props.categories;
     return (
         <React.Fragment>
         <section className="portfolio-section sp-pad">

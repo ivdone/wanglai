@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CategoryFilter from './CategoryFilter'
 import Drink from './Drink'
 
 class ProductsContent extends Component {

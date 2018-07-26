@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   Route,
-  BrowserRouter as Router,
+  BrowserRouter as Router
 } from 'react-router-dom';
 
 import Header from './Components/Header'
@@ -22,7 +22,8 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/products" component={Products}/>
-          <Route path="/blog" component={Blog}/>
+          <Route exact path="/blog" component={Blog}/>
+          <Route path="/blog/:blogid" component={Blog}/>
           <Route path="/contact" component={Contact}/>
 
           <Footer />

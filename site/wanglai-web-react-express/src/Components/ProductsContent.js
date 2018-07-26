@@ -10,19 +10,22 @@ class ProductsContent extends Component {
     this.update = this.update.bind(this);
   }
 
+  componentDidMount() {
+    this.update("*");
+  }
+
   update(category) {
     this.setState(
         (prevState, props) => {
-            return {drinks : this.props.drinks.filter(prop => category === "*" || category === prop.category)};
+            return {drinks : this.props.drinks.filter(drink => category === "*" || category === drink.category)};
         }
     );
   }
+
   render() {
     const categories = this.props.categories.map((cat) => 
                     <li className="control filter-btn" onClick={() => this.update(cat.class)}>{cat.fullName}</li>
                 );
-
-    console.log(this.state + " -------------------------------- ");
     return (
       <React.Fragment>
         <div className="sp-pad spad">
