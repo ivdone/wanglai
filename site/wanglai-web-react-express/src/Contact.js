@@ -8,7 +8,7 @@ class Products extends Component {
   render() {    
     return (
         <React.Fragment>
-            <PageTop bgurl="img/headers-bg/5.png" page="联系我们"/>
+            <PageTop bgurl="/img/headers-bg/5.png" pageurl="/contact" page="联系我们"/>
             <ContactSection bgurl={bgurl}/>
         </React.Fragment>
     );

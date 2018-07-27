@@ -4,7 +4,7 @@ import BlogPreviewLarge from './BlogPreviewLarge'
 class BlogContent extends Component {
   render() {
     const rows = this.props.previews.map((preview, id) => 
-      <BlogPreviewLarge blog={preview} key={id}/>
+      <BlogPreviewLarge blog={preview} key={id} callback={this.props.callback}/>
     );  
     return (
         <div className="col-lg-8 post-list blog-post-list">

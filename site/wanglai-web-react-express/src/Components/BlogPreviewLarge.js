@@ -7,7 +7,7 @@ class BlogPreviewLarge extends Component {
   render() {
     const blog = this.props.blog;
     const tags = blog.tags.map((tag, id) => 
-      <li key={id}><a>{tag.title}</a></li>
+      <li key={id} onClick={() => {this.props.callback(tag.fullName)}}><Link to="/blog">{tag.fullName}</Link></li>
     );
     return (
       <div className="single-post single-blog">
@@ -22,7 +22,7 @@ class BlogPreviewLarge extends Component {
             </h1>
           </Link>
           <p>
-            {blog.content}
+            {blog.preview}
           </p>
           <div className="bottom-meta">
             <div className="user-details row align-items-center">

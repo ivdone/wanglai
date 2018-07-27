@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 
 class Drink extends Component {
   render() {
-    const drink = this.props.drink;
-    const style = {backgroundImage: "url(\"" + drink.url + "\")"};
+    console.log(this.props);
+    const products = this.props.products;
+    const style = {backgroundImage: "url(\"" + products.url + "\")"};
     return (
-        <div className={"single-portfolio set-bg " + (drink.size ? " " + drink.size : "")} style={style}>
+        <div className={"single-portfolio set-bg " + (products.size ? " " + products.size : "")} style={style}>
             <a className="portfolio-info">
                 <div className="pfbg set-bg" style={style}></div>
-                <h5>{drink.title}</h5>
-                <p>{drink.desc}</p>
+                <h5>{products.title}</h5>
+                <p>{products.desc}</p>
             </a>
         </div>
     );

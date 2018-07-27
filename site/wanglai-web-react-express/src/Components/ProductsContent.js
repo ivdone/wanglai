@@ -5,36 +5,35 @@ class ProductsContent extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      drinks: this.props.drinks
+      tag: "*"
     };
     this.update = this.update.bind(this);
-  }
-
-  componentDidMount() {
-    this.update("*");
   }
 
   update(category) {
     this.setState(
         (prevState, props) => {
-            return {drinks : this.props.drinks.filter(drink => category === "*" || category === drink.category)};
+            return { tag : category};
         }
     );
   }
 
   render() {
-    const categories = this.props.categories.map((cat) => 
-                    <li className="control filter-btn" onClick={() => this.update(cat.class)}>{cat.fullName}</li>
+    const tags = this.props.tags.map((tag, id) => 
+                    <li className="control filter-btn" key={id} onClick={() => this.update(tag.class)}>{tag.fullName}</li>
                 );
+
+    const products = this.props.products.filter(drink => this.state.tag === "*" || this.state.tag === drink.category);
+
     return (
       <React.Fragment>
         <div className="sp-pad spad">
             <ul className="portfolio-filter controls">
                 <li className="control filter-btn" onClick={() => this.update("*")}>All</li>
-                {categories}
+                {tags}
             </ul>
         </div>
-        <DrinksProducts drinks={this.state.drinks}/>
+        <DrinksProducts products={products}/>
       </React.Fragment>
 
     );

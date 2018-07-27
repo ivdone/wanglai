@@ -7,7 +7,7 @@ class DrinksHome extends Component {
         <React.Fragment>
         <section className="portfolio-section sp-pad spad">
             <h1 className="sp-title">招牌饮品</h1>
-            <DrinksBase drinks={this.props.drinks} />
+            <DrinksBase products={this.props.products} />
             <div className="clearfix"></div>
         </section>
         </React.Fragment>

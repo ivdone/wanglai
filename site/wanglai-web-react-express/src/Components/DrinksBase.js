@@ -3,12 +3,12 @@ import Drink from './Drink'
 
 class ProductsContent extends Component {
   render() {
-    const drinks = this.props.drinks.map((drink, id) => 
-        <Drink drink={drink} key={id}/>
+    const products = this.props.products.map((products, id) => 
+        <Drink products={products} key={id}/>
     );
     return (
         <div className="portfolio-warp">                
-            {drinks}
+            {products}
         </div>      
     );
   }

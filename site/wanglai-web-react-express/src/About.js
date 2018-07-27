@@ -7,7 +7,7 @@ class About extends Component {
   render() {    
     return (
         <React.Fragment>
-            <PageTop bgurl="img/headers-bg/1.jpg" page="关于旺来"/>
+            <PageTop bgurl="/img/headers-bg/1.jpg" pageurl="/about" page="关于旺来"/>
             <Intro className="intro-area"/>
             <MileStone className="milestones-area"/>
 

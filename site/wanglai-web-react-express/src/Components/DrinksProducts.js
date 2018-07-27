@@ -6,7 +6,7 @@ class DrinksProducts extends Component {
     return (
         <React.Fragment>
         <section className="portfolio-section sp-pad">
-            <DrinksBase drinks={this.props.drinks} />
+            <DrinksBase products={this.props.products} />
             <div className="clearfix"></div>
         </section>
         </React.Fragment>

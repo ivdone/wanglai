@@ -7,7 +7,7 @@ class BlogPreview extends Component {
   render() {
     const blog = this.props.blog;
     const tags = blog.tags.map((tag, id) => 
-      <li key={id}><a href={"blog?tag=" + tag.id}>{tag.title}</a></li>
+      <li key={id}><Link to="/blog">{tag.fullName}</Link></li>
     );
     return (
       <div className="col-lg-4 single-blog">

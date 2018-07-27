@@ -4,7 +4,7 @@ class SinglePost extends Component {
   render() {
     const post = this.props.post;
     const tags = post.tags.map((tag, id) => 
-      <li key={id}><a href={"blog?tag=" + tag.id}>{tag.title}</a></li>
+      <li key={id}><a onClick={this.props.callback}>{tag.fullName}</a></li>
     );
     return (
       <div className="single-post single-blog">
