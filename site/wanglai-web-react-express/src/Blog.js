@@ -37,7 +37,8 @@ class Blog extends Component {
                     tags: res,
                 });
             });
-        if (this.props.match.params.blogid == undefined)
+            
+        if (this.props.match.params.blogid === undefined)
             return;
 
         fetch(postUrl + this.props.match.params.blogid).then(res => res.json())
