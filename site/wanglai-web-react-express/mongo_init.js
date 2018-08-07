@@ -152,7 +152,7 @@ const product_tags_init = () => {
 	console.log('Initializing product tags...');
 
 	db.collection('product_tags').remove({});
-	blog_tags.forEach(ele => {
+	product_tags.forEach(ele => {
 	    db.collection('product_tags').save(ele, (err, result) => {
 	        if (err) return console.log(err);
 	    });
@@ -185,7 +185,7 @@ const blog_tags_init = () => {
 	console.log('Initializing blog tags...');
 
 	db.collection('blog_tags').remove({});
-	product_tags.forEach(ele => {
+	blog_tags.forEach(ele => {
 	    db.collection('blog_tags').save(ele, (err, result) => {
 	        if (err) return console.log(err);
 	    });
