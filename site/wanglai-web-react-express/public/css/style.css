@@ -777,8 +777,9 @@ ol {
 .portfolio-info {
 	position: absolute;
 	width: calc(100% - 110px);
+	height: calc(30%);
 	left: 55px;
-	bottom: 15px;
+	bottom: 55px;
 	text-align: center;
 	padding-top: calc(15% - 55px);
 	border: 1px solid #fff;
@@ -788,6 +789,7 @@ ol {
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
 }
+
 
 .portfolio-info .pfbg {
 	position: absolute;
