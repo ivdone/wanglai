@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const cors = require('cors');
+const bodyParser= require('body-parser')
 
 const testProductCat = [
   {
@@ -170,7 +171,15 @@ const product_tags = [
   }
 ];
 
+app.use(express.static(path.join(__dirname, 'build')));
+console.log(path.join(__dirname, 'build'));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.use(cors({origin: 'http://localhost:3000'}));
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/api/post', function (req, res) {
     res.json(test);
@@ -201,4 +210,4 @@ app.get('/api/product_tags', function (req, res) {
     res.json(product_tags);
 });
 
-app.listen(9000);
+app.listen(8080);
