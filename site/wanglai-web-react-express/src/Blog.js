@@ -6,7 +6,7 @@ import SinglePost from './Components/SinglePost';
 
 const postUrl = "/api/post/";
 const blogPreviewsUrl="/api/post";
-const tagsUrl = "/api/tags";
+const tagsUrl = "/api/blog_tags";
 class Blog extends Component {
     constructor(props) {
         super(props);
