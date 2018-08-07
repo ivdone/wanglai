@@ -7,8 +7,8 @@ import ContactSection from './Components/ContactSection'
 import DrinksHome from './Components/DrinksHome'
 
 const bgurl="/img/review-bg.jpg"
-const productsUrl="http://localhost:9000/api/products";
-const blogPreviewsUrl="http://localhost:9000/api/post";
+const productsUrl="/api/products";
+const blogPreviewsUrl="/api/post";
 
 class Home extends Component {
   constructor()

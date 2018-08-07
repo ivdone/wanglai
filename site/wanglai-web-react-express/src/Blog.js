@@ -4,9 +4,9 @@ import BlogContent from './Components/BlogContent';
 import BlogSideBar from './Components/BlogSideBar';
 import SinglePost from './Components/SinglePost';
 
-const postUrl = "http://localhost:9000/api/post/";
-const blogPreviewsUrl="http://localhost:9000/api/post";
-const tagsUrl = "http://localhost:9000/api/tags";
+const postUrl = "/api/post/";
+const blogPreviewsUrl="/api/post";
+const tagsUrl = "/api/tags";
 class Blog extends Component {
     constructor(props) {
         super(props);
