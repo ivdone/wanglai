@@ -77,7 +77,7 @@ MongoClient.connect('mongodb://localhost:27017/wanglai', { useNewUrlParser: true
   // ... do something here
   if (err) throw err;
   const PORT = process.env.PORT || 3000;
-  console.log("mongodb connected :" + PORT);
   db = client.db('wanglai');
+  console.log("app listening on port:" + PORT);
   app.listen(PORT);
 });
