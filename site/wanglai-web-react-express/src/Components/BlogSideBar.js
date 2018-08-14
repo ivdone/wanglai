@@ -17,9 +17,9 @@ class BlogSideBar extends Component {
 
             <div className="single-widget protfolio-widget">
                 <img src="/img/blog/s-img.jpg" alt=""/>
-                <h4>何龙</h4>
+                <h4>项目开发中</h4>
                 <p>
-                    旺来鲜茶吉祥物
+                    blog开发中
                 </p>
                 <ul>
                     <li><i className="fa fa-facebook"></i></li>
@@ -30,7 +30,7 @@ class BlogSideBar extends Component {
             </div>
 
             <div className="single-widget category-widget">
-                <h4 className="title">Post Categories</h4>
+                <h4 className="title">文章分类</h4>
                 <ul>
                     <li key="id" onClick={() => this.props.callback("*")}><a className="justify-content-between align-items-center d-flex"><h6>All</h6> <span>{sum}</span></a></li>
                     {rows}
