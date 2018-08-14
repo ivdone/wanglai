@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Drink extends Component {
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     const products = this.props.products;
     const style = {backgroundImage: "url(\"" + products.url + "\")"};
     return (
