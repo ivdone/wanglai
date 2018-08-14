@@ -3,34 +3,42 @@ var db;
 
 const product_tags = [
   {
-    class: "photo",
-    fullName: "Photography"
+    class: "奶茶",
+    fullName: "调味奶茶"
   },
   {
-    class: "wedding",
-    fullName: "Weddings"
+    class: "鲜茶",
+    fullName: "宝岛鲜茶"
   },
   {
-    class: "land",
-    fullName: "Landscapes"
+    class: "复古",
+    fullName: "复刻回忆"
   },
   {
-    class: "port",
-    fullName: "Portraits"
+    class: "鲜奶",
+    fullName: "香醇鲜奶"
+  },
+  {
+  	class: "水果",
+  	fullName: "旺来水果"
+  },
+  {
+  	class: "冰饮",
+  	fullName: "私创冰饮"
   }
 ];
 
 const blog_tags = [ 
     {
         id: 0,
-        class: "travel",
-        fullName: "Travel",
+        class: "饮品",
+        fullName: "饮品",
         count: 24
     },
     {
         id: 1,
-        class: "life",
-        fullName: "Life",
+        class: "品牌",
+        fullName: "品牌",
         count: 55
     }
 ];
@@ -38,75 +46,66 @@ const blog_tags = [
 const sample_products = [
     {
         id : 0,
-        url : "img/drinks/1.jpg",
+        url : "img/products/compressed/1-min.JPG",
         title : "黑糖珍珠波霸撞奶",
-        category: "photo",
+        category: "奶茶",
         desc : "很厉害"
     },
     {
         id : 1,
-        url : "img/drinks/2.jpg",
+        url : "img/products/compressed/11-min.JPG",
         title : "黑糖珍珠波霸撞奶",
-        category: "land",
+        category: "鲜茶",
         desc : "很厉害"
     },
     {
         id : 2,
-        url : "img/drinks/3.jpg",
-        title : "黑糖珍珠波霸撞奶",
-        category: "wedding",
+        url : "img/products/compressed/12-min.JPG",
+        title : "翠綠包種綠茶",
+        category: "复古",
         desc : "很厉害"
     },
     {
         id : 3,
-        url : "img/drinks/4.jpg",
-        title : "黑糖珍珠波霸撞奶",
+        url : "img/products/compressed/13-min.JPG",
+        title : "春日百香綠茶",
         desc : "很厉害",
-        category: "wedding",
-        size : "sm-wide"
+        category: "鲜奶"
+        //size : "sm-wide"
     },
     {
         id : 4,
-        url : "img/drinks/5.jpg",
+        url : "img/products/compressed/14-min.JPG",
         title : "黑糖珍珠波霸撞奶",
         desc : "很厉害",
-        category: "photo",
-        size : "sm-wide"
+        category: "水果"    
     },
     {
         id : 5,
-        url : "img/drinks/6.jpg",
-        title : "黑糖珍珠波霸撞奶",
-        category: "port",
+        url : "img/products/compressed/15-min.JPG",
+        title : "翠玉包種綠奶茶",
+        category: "水果",
         desc : "很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害很厉害"
     },
     {
         id : 6,
-        url : "img/drinks/7.jpg",
-        title : "黑糖珍珠波霸撞奶",
+        url : "img/products/compressed/16-min.JPG",
+        title : "鳳梨綠冰茶",
         desc : "很厉害",
-        category: "port",
-        size : "sm-wide"
+        category: "冰饮"
     },
     {
         id : 7,
-        url : "img/drinks/8.jpg",
-        title : "黑糖珍珠波霸撞奶",
-        category: "land",
+        url : "img/products/compressed/18-min.JPG",
+        title : "古釀冬瓜茶",
+        category: "鲜茶",
         desc : "很厉害",
     },
     {
         id : 8,
-        url : "img/drinks/9.jpg",
+        url : "img/products/compressed/19-min.JPG",
         title : "黑糖珍珠波霸撞奶",
-        category: "wedding",
-        desc : "很厉害",
-    },
-    {
-        id : 9,
-        url : "img/drinks/10.jpg",
-        title : "黑糖珍珠波霸撞奶",
-        category: "land",
+        category: "鲜奶",
         desc : "很厉害",
     }
 ];
@@ -115,30 +114,30 @@ const sample_posts = [
     {
         blogid : 0,
         img : "/img/b1.jpg",
-        tags: [{id : 0, class: "travel", fullName : "Travel"}, {id : 1, class: "life", fullName : "Life"}],
-        title: "Portable latest Fashion for young women",
-        preview: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
-        content: "something",
+        tags: [{id : 0, class: "饮品", fullName : "饮品"}, {id : 1, class: "品牌", fullName : "品牌"}],
+        title: "旺来网站上线",
+        preview: "旺来网站alpha上线",
+        content: "旺来网站alpha上线",
         post_date: "31st January, 2018"        
-    },
-    {
-        blogid : 1,
-        img : "/img/b2.jpg",
-        tags: [{id : 0, class: "travel", fullName : "Travel"}, {id : 1, class: "life", fullName : "Life"}],
-        title: "Portable latest Fashion for young women 2",
-        preview: "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
-        content: "something",
-        post_date: "31st January, 2018"
-    },
-    {
-        blogid : 3,
-        img : "/img/b2.jpg",
-        tags: [{id : 1, class: "travel", fullName : "Travel"}],
-        title: "Portable latest Fashion for young women 2",
-        preview: "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
-        content: "something",
-        post_date: "31st January, 2018"
     }
+    // {
+    //     blogid : 1,
+    //     img : "/img/b2.jpg",
+    //     tags: [{id : 0, class: "品牌", fullName : "品牌"}, {id : 1, class: "饮品", fullName : "饮品"}],
+    //     title: "Portable latest Fashion for young women 2",
+    //     preview: "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
+    //     content: "something",
+    //     post_date: "31st January, 2018"
+    // },
+    // {
+    //     blogid : 3,
+    //     img : "/img/b2.jpg",
+    //     tags: [{id : 1, class: "饮品", fullName : "饮品"}],
+    //     title: "Portable latest Fashion for young women 2",
+    //     preview: "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore.",
+    //     content: "something",
+    //     post_date: "31st January, 2018"
+    // }
 ];
 
 const init = () => {

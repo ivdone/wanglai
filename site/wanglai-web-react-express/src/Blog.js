@@ -73,7 +73,7 @@ class Blog extends Component {
             : <BlogContent previews={this.state.currentPreviews} callback={(category) => this.update(category)}/>;
         return (
             <React.Fragment>
-                <PageTop bgurl="/img/headers-bg/4.jpg" page="Blog" pageurl="/blog"/>
+                <PageTop bgurl="/img/headers-bg/5.jpg" page="Blog" pageurl="/blog"/>
                 <section className="blog-posts-area section-gap">
                     <div className="container">
                         <div className="row">

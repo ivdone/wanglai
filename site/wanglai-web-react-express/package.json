@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/ivdone/wanglai/issues"
   },
-  "homepage": "https://github.com/ivdone/wanglai#readme",
+  "homepage": ".",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",

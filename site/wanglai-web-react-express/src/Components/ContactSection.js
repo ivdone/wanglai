@@ -14,9 +14,9 @@ class Contact extends Component {
               <p>请留下您的联系方式，我们会在48小时内与您联系。</p>
 
               <ul className="con-info">
-                <li><i className="flaticon-phone-call"></i>+12 123 222 555</li>
-                <li><i className="flaticon-envelope"></i>office@template.com</li>
-                <li><i className="flaticon-placeholder"></i>Main Str. no 45-46, b3, 56832, Chengdu, China</li>
+                <li><i className="flaticon-phone-call"></i>400-6311008</li>
+                <li><i className="flaticon-envelope"></i>暂无</li>
+                <li><i className="flaticon-placeholder"></i>成都市锦江区锦华路一段8号1栋11单元19层1940号</li>
               </ul>
             </div>
           </div>
