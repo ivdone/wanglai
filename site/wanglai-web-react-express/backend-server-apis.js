@@ -76,7 +76,7 @@ app.post('/api/product_tags', function (req, res) {
 MongoClient.connect('mongodb://localhost:27017/wanglai', { useNewUrlParser: true }, (err, client) => {
   // ... do something here
   if (err) throw err;
-  const PORT = 8080;
+  const PORT = process.env.PORT || 3000;
   console.log("mongodb connected :" + PORT);
   db = client.db('wanglai');
   app.listen(PORT);
