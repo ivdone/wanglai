@@ -140,15 +140,25 @@ const sample_posts = [
     // }
 ];
 
+const sample_contact = [
+    {
+        name : "zzz",
+        tel : "1313131313",
+        title : "hi",
+        content : "hihihihihi"
+    }
+]
+
 const init = () => {
 	product_tags_init();
 	blog_tags_init();
 	sample_product_init();
 	sample_posts_init();
+    sample_contact_init();
 }
 
 const product_tags_init = () => {
-	console.log('Initializing product tags...');
+	console.log('Initializing product tags tags...');
 
 	db.collection('product_tags').remove({});
 	product_tags.forEach(ele => {
@@ -159,7 +169,7 @@ const product_tags_init = () => {
 }
 
 const sample_posts_init = () => {
-	console.log('Initializing product tags...');
+	console.log('Initializing posts tags...');
 
 	db.collection('posts').remove({});
 	sample_posts.forEach(ele => {
@@ -181,7 +191,7 @@ const sample_product_init = () => {
 }
 
 const blog_tags_init = () => {
-	console.log('Initializing blog tags...');
+	console.log('Initializing blog tags tags...');
 
 	db.collection('blog_tags').remove({});
 	blog_tags.forEach(ele => {
@@ -191,6 +201,16 @@ const blog_tags_init = () => {
 	});
 }
 
+const sample_contact_init = () => {
+    console.log('Initializing contact tags...');
+
+    db.collection('contact_info').remove({});
+    sample_contact.forEach(ele => {
+        db.collection('contact_info').save(ele, (err, result) => {
+            if (err) return console.log(err);
+        });
+    });
+}
  
 
 MongoClient.connect('mongodb://localhost:27017/wanglai', { useNewUrlParser: true }, (err, client) => {

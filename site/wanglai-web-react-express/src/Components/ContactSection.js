@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
+  componentDidMount()  {
+    const script = document.createElement("script");
+
+    script.src = "/js/contact.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }
+
   render() {
     const style = {backgroundImage: "url(\"" + this.props.bgurl + "\")"};
 
@@ -23,18 +32,19 @@ class Contact extends Component {
           <div className="container p-0">
             <div className="row">
               <div className="col-xl-8 offset-xl-4">
-                <form className="contact-form">
+                <form className="contact-form" id="contact-form">
                   <div className="row">
                     <div className="col-md-6">
-                      <input type="text" placeholder="称呼"/>
+                      <input id="contact-name" type="text" placeholder="称呼"/>
                     </div>
                     <div className="col-md-6">
-                      <input type="tel" placeholder="联系电话"/>
+                      <input id="contact-tel" type="tel" placeholder="联系电话"/>
                     </div>
                     <div className="col-md-12">
-                      <input type="text" placeholder="主题"/>
-                      <textarea placeholder="内容"></textarea>
-                      <button className="site-btn light">留言</button>
+                      <input id="contact-title" type="text" placeholder="主题"/>
+                      <textarea id="contact-content" placeholder="内容"></textarea>
+                      <button id="contact-btn" className="site-btn light">留言</button>
+                      <div id="contact-submit-response"></div>
                     </div>
                   </div>
                 </form>

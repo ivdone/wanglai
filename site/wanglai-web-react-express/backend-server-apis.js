@@ -67,14 +67,33 @@ app.get('/api/product_tags', function (req, res) {
     });
 });
 
-app.post('/api/product_tags', function (req, res) {
-    db.collection('product_tags').save(req.body, (err, result) => {
+// app.post('/api/product_tags', function (req, res) {
+//     db.collection('product_tags').save(req.body, (err, result) => {
+//         if (err) return console.log(err);
+
+//         console.log('saved to database');
+//         res.send('success');
+//     });
+// });
+
+app.post('/api/contact_info/', function (req, res) {
+    console.log(req.body);
+    db.collection('contact_info').save(req.body, (err, result) => {
         if (err) return console.log(err);
 
         console.log('saved to database');
-        res.send('success');
+        res.send('成功提交，我们将尽快与您联系');
     });
 });
+
+app.get('/api/contact_info/', function (req, res) {
+    db.collection('contact_info').find().toArray((err, results) => {
+        //console.log(err, results);
+        res.json(results);
+    });
+});
+
+
 
 MongoClient.connect('mongodb://localhost:27017/wanglai', { useNewUrlParser: true }, (err, client) => {
   // ... do something here
