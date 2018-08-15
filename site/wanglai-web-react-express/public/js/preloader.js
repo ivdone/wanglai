@@ -10,6 +10,8 @@
 'use strict';
 
 (function($) {
-	$(".loader").fadeOut(); 
-	$("#preloder").delay(400).fadeOut("slow");
+	setTimeout(() => {
+		$(".loader").fadeOut(); 
+		$("#preloder").delay(400).fadeOut("slow");
+	}, 3000);
 })(jQuery);

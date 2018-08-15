@@ -15,6 +15,9 @@ class Header extends Component {
   render() {
     return (
         <React.Fragment>
+        <div id="preloder">
+            <div className="loader"></div>
+        </div>
         
 	    <header className="header-section sp-pad" >	
             <h3 className="site-logo">旺来鲜<sup>®</sup>茶</h3>
