@@ -22,8 +22,11 @@ app.get('/api/post', function (req, res) {
 });
 
 app.get('/api/post/:post_id', function (req, res) {    
-    var postid = req.params.post_id;    
-    res.json(test[postid]);
+    var postid = req.params.post_id; 
+    db.collection('posts').find({id: postid}).toArray((err, results) => {
+        //console.log(err, results);
+        res.json(results);
+    });
 });
 
 app.get('/api/products', function (req, res) {
