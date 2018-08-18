@@ -47,16 +47,16 @@ const sample_products = [
     {
         id : 0,
         url : "img/products/compressed/1-min.JPG",
-        title : "黑糖珍珠波霸撞奶",
-        category: "奶茶",
-        desc : "很厉害"
+        title : "手炒黑糖波霸撞奶",
+        category: "复古",
+        desc : "熬煮2小时的手炒黑糖波霸，充满嚼劲的珍珠配上鲜奶，味道浓郁，喝出奶茶新高度"
     },
     {
         id : 1,
         url : "img/products/compressed/11-min.JPG",
-        title : "黑糖珍珠波霸撞奶",
-        category: "鲜茶",
-        desc : "很厉害"
+        title : "旺来水果茶",
+        category: "水果",
+        desc : "人气NO.1必喝，全台第一水果茶！多种新鲜水果，清爽的热带果香，丰富多重的口感，一杯饮品多种享受"
     },
     {
         id : 2,
@@ -90,9 +90,9 @@ const sample_products = [
     {
         id : 6,
         url : "img/products/compressed/16-min.JPG",
-        title : "鳳梨綠冰茶",
-        desc : "很厉害",
-        category: "冰饮"
+        title : "森永牛奶糖奶茶",
+        desc : "特别加入经典森永牛奶糖，以茶香中和牛奶的甜腻，还没开喝就能闻到经典的浓浓牛奶糖味，一口喝下浓郁的焦糖香气和鲜奶在嘴里蔓延，不过分死甜，风味更加香醇",
+        category: "奶茶"
     },
     {
         id : 7,
@@ -113,7 +113,7 @@ const sample_products = [
 const sample_posts = [
     {
         blogid : 0,
-        img : "/img/b1.jpg",
+        img : "/img/products/1.JPG",
         tags: [{id : 0, class: "饮品", fullName : "饮品"}, {id : 1, class: "品牌", fullName : "品牌"}],
         title: "旺来网站上线",
         preview: "旺来网站alpha上线",
