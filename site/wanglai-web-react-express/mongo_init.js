@@ -113,7 +113,7 @@ const sample_products = [
 const sample_posts = [
     {
         blogid : 0,
-        img : "/img/products/1-min.JPG",
+        img : "/img/products/compressed/1-min.JPG",
         tags: [{id : 0, class: "饮品", fullName : "饮品"}, {id : 1, class: "品牌", fullName : "品牌"}],
         title: "旺来网站上线",
         preview: "旺来网站alpha上线",
