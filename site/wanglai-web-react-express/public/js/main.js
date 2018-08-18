@@ -12,15 +12,6 @@
 (function($) {
 
 	/*------------------
-		Navigation
-	--------------------*/
-	$('.nav-switch').on('click', function(event) {
-		$('.main-menu').slideToggle(400);
-		event.preventDefault();
-	});
-
-
-	/*------------------
 		PORTFOLIO
 	--------------------*/
 	if($('.portfolio-warp').length > 0 ) {

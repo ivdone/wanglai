@@ -7,7 +7,7 @@ class Header extends Component {
   componentDidMount()  {
     const script = document.createElement("script");
 
-    script.src = "/js/preloader.js";
+    script.src = "/js/header.js";
     script.async = true;
 
     document.body.appendChild(script);

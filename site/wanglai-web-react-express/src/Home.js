@@ -34,7 +34,7 @@ class Home extends Component {
                         products: products,
                         blogPreviews: blogPreviews
                     });
-                });
+                }).catch(() => console.log("error"));
         }
     );
   }
