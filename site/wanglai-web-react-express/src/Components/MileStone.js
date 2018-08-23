@@ -32,7 +32,7 @@ class MileStone extends Component {
           <div className="col-lg-3 fact-box">
             <div className="fact-content">
               <i className="flaticon-atomic"></i>
-              <h2>19</h2>
+              <h2>4</h2>
               <p>品牌门店</p>
             </div>
           </div>
