@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class Footer extends Component {
   render() {
+    const col = {
+      color: 'grey',
+      fontSize: '6px'
+    }
     return (
       <footer className="footer-section spad">
         <div className="container text-center">
@@ -13,8 +17,7 @@ class Footer extends Component {
             <a><i className="fa fa-dribbble"></i></a> 
           </div>
         </div>
-
-
+        <div className="text-center"><a href="http://miitbeian.gov.cn" style={col}>蜀ICP备18028101</a></div>
       </footer>
     );
   }
