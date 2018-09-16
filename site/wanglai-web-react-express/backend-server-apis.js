@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const bodyParser= require('body-parser')
-const MongoClient = require('mongodb').MongoClient;
+const mongodb = require('mongodb')
+const MongoClient = mongodb.MongoClient;
 var db;
 
 app.use(express.static(path.join(__dirname, 'build')));
@@ -10,6 +11,18 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.get('/products', function (req, res) {
+  res.redirect('/');
+});
+
+app.get('/about', function (req, res) {
+  res.redirect('/');
+});
+
+app.get('/blog', function (req, res) {
+  res.redirect('/');
 });
 
 app.use(bodyParser.urlencoded({extended: true}))
@@ -34,6 +47,10 @@ app.get('/api/products', function (req, res) {
         //console.log(err, results);
         res.json(results);
     });
+});
+
+app.get('/display', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'display.html'))
 });
 
 app.get('/api/products/:product_id', function (req, res) {
@@ -93,7 +110,11 @@ app.get('/api/contact_info/', function (req, res) {
     });
 });
 
-
+app.delete('/api/contact_info/:id', function (req, res) {
+    var id = req.params.id;
+    var result = db.collection('contact_info').deleteOne({_id: new mongodb.ObjectID(id)});
+    res.json(result)
+});
 
 MongoClient.connect('mongodb://localhost:27017/wanglai', { useNewUrlParser: true }, (err, client) => {
   // ... do something here
