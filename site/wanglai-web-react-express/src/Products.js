@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PageTop from './Components/PageTop'
 import ProductsContent from './Components/ProductsContent'
 
-const productsUrl="/api/products";
-const tagsUrl="/api/product_tags"
+const productsUrl="http://118.31.54.140/api/products";
+const tagsUrl="http://118.31.54.140/api/product_tags"
 
 class Products extends Component {
   constructor()

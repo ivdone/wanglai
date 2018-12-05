@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 
 import HeroSlider from './Components/HeroSlider'
 import Intro from './Components/Intro'
-import LatestBlogs from './Components/LatestBlogs'
 import ContactSection from './Components/ContactSection'
 import DrinksHome from './Components/DrinksHome'
 
 const bgurl="/img/review-bg.jpg"
-const productsUrl="/api/products";
-const blogPreviewsUrl="/api/post";
+const productsUrl="http://118.31.54.140/api/products";
+const blogPreviewsUrl="http://118.31.54.140/api/post";
 
 class Home extends Component {
   constructor()
@@ -45,7 +44,6 @@ class Home extends Component {
             <HeroSlider className="hero-slider-area"/>
             <Intro className="intro-area"/>
             <DrinksHome className="drinks-area" products={this.state.products}/>
-            <LatestBlogs className="latest-blog" BlogPreviews={this.state.blogPreviews} />
             <ContactSection className="contact-area" bgurl={bgurl}/>
         </React.Fragment>
     );
