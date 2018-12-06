@@ -3,8 +3,11 @@ const path = require('path');
 const app = express();
 const bodyParser= require('body-parser')
 const mongodb = require('mongodb')
+const cors = require('cors')
 const MongoClient = mongodb.MongoClient;
 var db;
+
+app.use(cors())
 
 app.use(express.static(path.join(__dirname, 'build')));
 // console.log(path.join(__dirname, 'build'));
