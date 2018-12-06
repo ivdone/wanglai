@@ -10,10 +10,10 @@
 'use strict';
 
 (function($) {
-	setTimeout(() => {
+	window.onload(() => {
 		$(".loader").fadeOut(); 
 		$("#preloder").delay(400).fadeOut("slow");
-	}, 3000);
+	});
 
 	
 	/*------------------
